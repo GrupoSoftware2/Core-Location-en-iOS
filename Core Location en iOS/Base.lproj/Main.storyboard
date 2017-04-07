@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Core_Location_en_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpg-Ge-MM1">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Location en iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQk-X8-ZJh">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.77647058820000003" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nQk-X8-ZJh" firstAttribute="centerY" secondItem="Cpg-Ge-MM1" secondAttribute="centerY" id="Uap-38-EE7"/>
+                                    <constraint firstItem="nQk-X8-ZJh" firstAttribute="centerX" secondItem="Cpg-Ge-MM1" secondAttribute="centerX" id="wjt-4J-piT"/>
+                                    <constraint firstAttribute="height" constant="50" id="xLv-cK-4qA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPT-YT-1iG">
+                                <state key="normal" title="Activar Core Location"/>
+                                <connections>
+                                    <action selector="btnActivarTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTm-7S-yZk"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cordinate" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="znK-Lj-Hwe">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="279" id="gkY-tR-TEB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnY-23-wpw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fFR-Ir-UK0"/>
+                                </constraints>
+                                <state key="normal" title="Solicitar Solicitud"/>
+                                <connections>
+                                    <action selector="btnSolicitarTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkc-q8-GEk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="znK-Lj-Hwe" firstAttribute="top" secondItem="NPT-YT-1iG" secondAttribute="bottom" constant="32" id="0sk-3e-Rvh"/>
+                            <constraint firstItem="Cpg-Ge-MM1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Fg-ot-bYe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DnY-23-wpw" secondAttribute="bottom" constant="20" id="2PT-B9-p9O"/>
+                            <constraint firstItem="NPT-YT-1iG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ir3-ZI-dww"/>
+                            <constraint firstItem="znK-Lj-Hwe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KlW-xn-8zt"/>
+                            <constraint firstItem="Cpg-Ge-MM1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R1U-8w-2dv"/>
+                            <constraint firstItem="NPT-YT-1iG" firstAttribute="top" secondItem="Cpg-Ge-MM1" secondAttribute="bottom" constant="36" id="Sty-o5-N8f"/>
+                            <constraint firstAttribute="trailing" secondItem="Cpg-Ge-MM1" secondAttribute="trailing" id="bAb-Q2-XqH"/>
+                            <constraint firstItem="DnY-23-wpw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLD-yC-fsD"/>
+                            <constraint firstItem="znK-Lj-Hwe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u2I-Ig-fAw"/>
+                            <constraint firstItem="znK-Lj-Hwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ykH-LM-wac"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="znK-Lj-Hwe" id="Y0q-eO-OFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
